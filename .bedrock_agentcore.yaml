@@ -1,0 +1,44 @@
+default_agent: agent_deployment_meu_agente
+agents:
+  agent_deployment_meu_agente:
+    name: agent_deployment_meu_agente
+    entrypoint: C:/Users/alexv/OneDrive/Documentos/VsCode/Dio/Cursos/AWS/Agentes/dio_agent_core/agent_deployment/meu_agente.py
+    platform: linux/arm64
+    container_runtime: none
+    source_path: C:\Users\alexv\OneDrive\Documentos\VsCode\Dio\Cursos\AWS\Agentes\dio_agent_core\agent_deployment
+    aws:
+      execution_role: null
+      execution_role_auto_create: true
+      account: 004807598138
+      region: us-east-1
+      ecr_repository: 004807598138.dkr.ecr.us-east-1.amazonaws.com/bedrock-agentcore-agent_deployment_meu_agente
+      ecr_auto_create: false
+      network_configuration:
+        network_mode: PUBLIC
+        network_mode_config: null
+      protocol_configuration:
+        server_protocol: HTTP
+      observability:
+        enabled: true
+      lifecycle_configuration:
+        idle_runtime_session_timeout: null
+        max_lifetime: null
+    bedrock_agentcore:
+      agent_id: null
+      agent_arn: null
+      agent_session_id: eddd3ea7-9759-4467-88d2-469a1d70af39
+    codebuild:
+      project_name: null
+      execution_role: null
+      source_bucket: null
+    memory:
+      mode: STM_ONLY
+      memory_id: null
+      memory_arn: null
+      memory_name: agent_deployment_meu_agente_memory
+      event_expiry_days: 30
+      first_invoke_memory_check_done: false
+      was_created_by_toolkit: false
+    authorizer_configuration: null
+    request_header_configuration: null
+    oauth_configuration: null

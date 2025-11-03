@@ -1,0 +1,17 @@
+[project]
+name = "dio-agent-core"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "bedrock-agentcore>=1.0.5",
+    "bedrock-agentcore-starter-toolkit>=0.1.28",
+    "strands-agents>=1.14.0",
+    "strands-agents-tools>=0.2.13",
+]
+
+[tool.uv.workspace]
+members = [
+    "agent_deployment",
+]
